@@ -30,8 +30,8 @@ target_link_libraries(calm ${ROOT_LIBRARIES})
 #
 set(CALM_SCRIPTS
     	share/particles.data
-	events.ini
-	config.ini
+	share/events.ini
+	share/config.ini
     	run_CALM.sh
     	Doxyfile)
 foreach(_script ${CALM_SCRIPTS})
@@ -41,6 +41,11 @@ foreach(_script ${CALM_SCRIPTS})
     COPYONLY
     )
 endforeach()
+
+file(COPY ${PROJECT_BINARY_DIR}/share/config.ini DESTINATION ${PROJECT_BINARY_DIR})
+file(COPY ${PROJECT_BINARY_DIR}/share/events.ini DESTINATION ${PROJECT_BINARY_DIR})
+file(REMOVE ${PROJECT_BINARY_DIR}/share/config.ini)
+file(REMOVE ${PROJECT_BINARY_DIR}/share/events.ini)
 
 #----------------------------------------------------------------------------
 # Makeing events directory

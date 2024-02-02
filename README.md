@@ -31,6 +31,9 @@ Installation:
    If cmake fails to find ROOT package, you can specify its path via:
    
       cmake -DROOTSYS='your_path_to_root_installation_e_g_/opt/root' ..
+
+Run:
+     To launch CALM with default configuration just run ”calm” program inside the build directory. For information for more specific settings please consult the manual (CALM-user_manual.pdf).
       
 Capabilities
 ------------------------------
