@@ -1,0 +1,12 @@
+\newpage
+\section{The script}
+Script "run\_CALM.sh" helps to launch CALM faster and more efficiently. It modifies events.ini file with values passed as a arguments and launches CALM in 4 background processes, which means that simulation will be running in 4 parallel threads. Events from each thread will be saved into separate directory inside "EventDir" directory passed in events.ini file.\\
+Script takes two arguments:
+\begin{enumerate}
+    \item \$EventType -- value from following: 0, 1, 2 ,3, 4, 5
+    \item \$NumberOfEvents -- each thread simulates that number of events divided by 4
+\end{enumerate}
+For example:\\\tab ./run\_CALM.sh 3 40000\\
+runs 4 CALMs each generating 10000 events for GlobalReggae option.\\
+
+Tip: You can modify NumberOfCores variable, on the beggining of the script, to define how many background simulations will be run.

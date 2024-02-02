@@ -1,0 +1,15 @@
+\newpage
+\section{CALM options}
+\label{sec:CALMoptions}
+CALM has six options of simulation. We can distinguish them into two types:
+\begin{enumerate}
+    \item GENBOD -- program uses CERN Root library Genbod which is used to make similar simulations
+    \item REGGAE\cite{Meres:2011ek} -- REscatterig-after-Genbod GenerAtor of Events, more effective type of simulation, easier but much faster
+\end{enumerate}
+Each of them has three types of influence on outgoing particles:
+\begin{itemize}
+    \item Global -- simple proton-proton collision (no influence)
+    \item MinijetsGlobal -- split particles into two jets and boosts them in opposite directions
+    \item MinijetsLocal -- same as above but here CALM will check conservation laws for each jet separately 
+\end{itemize}
+

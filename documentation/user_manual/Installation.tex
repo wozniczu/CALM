@@ -1,0 +1,26 @@
+\newpage
+\section{Installation}
+The installation will be carried out on Linux system.
+\subsection{Requirements}
+\begin{itemize}
+    \item CALM source archive -- \url{https://github.com/wozniczu/CALM.git}
+    \item Cmake -- \url{https://cmake.org}
+    \item C++ compiler (for example gcc)
+    \item CERN Root Framework -- \url{https://root.cern/install/}
+\end{itemize}
+Cmake, compiler and Root have to be installed on the machine and CALM source archive extracted to the installation directory.
+\subsection{CALM archive}
+The archive contains:
+\begin{itemize}
+    \item Source code of CALM -- "include" and "src" directories
+    \item Particle database that are used by CALM in its runtime -- "Shared/particles.data"
+    \item Configuration files -- event.ini, config.ini
+    \item Calibration files -- "distributions" directory
+    \item Script that helps to launch CALM -- "run\_CALM.sh"
+\end{itemize}
+Details and utility of configuration files and script will be described later inside this manual.
+\subsection{Compilation}
+Type inside installation directory:\\\tab mkdir build \\\tab cd build \\\tab cmake .. \\\tab make
+\subsection{How to launch CALM}
+To launch CALM with default configuration just run "calm" file inside build directory.\\
+Alternatively, run "run\_CALM.sh" to generate multiple events simultaneously (runs the CALM program on multiple cores).

@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{cite}
+\newcommand\tab[1][7cm]{\hspace*{#1}}
+
+\title{CALM - user manual} %v1.3}
+\author{Filip Skóra, Bartosz Woźnica}
+
+\begin{document}
+
+\maketitle
+\newpage
+\tableofcontents
+
+
+\begin{large}
+\input{Introduction}
+\input{Installation}
+\input{WorkingScheme}
+\input{ConfigFiles}
+\input{Options}
+\input{Script}
+\newpage
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{amsplain}
+
+\bibliography{BibFile}
+
+\end{large}
+\end{document}

@@ -1,0 +1,43 @@
+\newpage
+\section{Configuration files}
+Configuration files gives access to some elements inside CALM.
+\subsection{events.ini}
+This file provides data which are used before the simulation starts.\\\\
+Parameters:
+\begin{itemize}
+    \item NumberOfEvents -- number of events to generate 
+    \item EventFileType -- event output file format (available: root, root\&text or text)
+    \item MultiplicityDistribution -- distribution of primordial particles multiplicity (available: Poisson)
+    \item Randomize -- start each event with a new random seed taken from current time (1) or do a constant seed (0)
+    \item ShareDir -- directory with SHARE input files
+    \item MacroDir -- directory with ROOT macro files *.C
+    \item EventDir -- directory to write the events
+    \item LogFile -- log file
+    \item MultiplicityMin -- multiplicity range, minimum
+    \item MultiplicityMax -- multiplicity range, maximum
+    \item GenbodEnergy -- event energy
+    \item EventType -- what is to be generated (section \ref{sec:CALMoptions}: CALM options)
+    \item NumberOfJets -- number of jets generated
+\end{itemize}
+
+\newpage
+\subsection{config.ini}
+This file provides data which CALM uses to simulate elements of each event.\\\\
+Parameters:
+\begin{itemize}
+    \item Nmean -- average charged particle multiplicity per rapidity unit from 900 GeV
+    \item RapidityInterval -- rapidity interval
+    \item XYZ -- standard deviation of three dimensional gaussian distribution
+    \item divideEn -- coefficients for division of energy
+    \item \$\{particleType\}MultDistr -- custom distribution function for \$\{particleType\}
+    \item \$\{particleType\}\_xMin -- custom distribution function minimum range for \$\{particleType\}
+    \item \$\{particleType\}\_xMax -- custom distribution function maximum range for \$\{particleType\}
+    \item singleEnergyDistr -- custom distribution function for singleEnergy
+    \item singleEnergyDistr\_xMin -- custom distribution function minimum range for singleEnergy
+    \item singleEnergyDistr\_xMax -- custom distribution function maximum range for singleEnergy   
+    \item \$\{particleType\}MultDistrPath -- path to file containing custom distribution function for \$\{particleType\}
+    \item singleEnergyDistrPath -- path to file containing custom distribution function for singleEnergy
+    \item customMult -- determines if custom distribution for particles will be used
+    \item importMethod -- determines if custom distributions will be imported from file
+\end{itemize}
+*\$\{particleType\} -- pions, kaons, nucleons or lambdas
